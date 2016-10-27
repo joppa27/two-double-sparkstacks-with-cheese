@@ -1,7 +1,7 @@
 version: '2'
 services:
     master:
-        build: .
+        image: kongkoro/spark:1.6.2
         command: spark-class org.apache.spark.deploy.master.Master
         ports: 
             - "8080" 
@@ -17,7 +17,7 @@ services:
             - "7006"
             - "6066:6066"
     worker:
-        build: .
+        image: kongkoro/spark:1.6.2
         command: spark-class org.apache.spark.deploy.worker.Worker spark://master:7077
         depends_on:
             - master
