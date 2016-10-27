@@ -19,7 +19,8 @@ got tired of fighting with ops for hardware and access.  Dockerized a spark stac
  
  #to see the port mappings(important for the spark master url, 
  #look for which port 7077 is mapped to
- # if my mapping is this 0.0.0.0:32954->7077/tcp my master URL will look something like this spark://192.168.99.100:32954:
+ # if my mapping is this 0.0.0.0:32954->7077/tcp my master URL will look something like this:
+ # spark://192.168.99.100:32954
  docker-compose ps
  
  #to scale the worker nodes for more horsepower:
