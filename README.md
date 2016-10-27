@@ -2,7 +2,7 @@
 got tired of fighting with ops for hardware and access.  Dockerized a spark stack that I can play with to my hearts content!
 
 #Pre-Reqs
-1. Install Docker! you can get it from [https://docker.github.io/engine/installation/](https://docker.github.io/engine/installation/)
+1. Docker & Docker Compose. Get it from [https://docker.github.io/engine/installation/](https://docker.github.io/engine/installation/)
 2. Windows/OSX users: Docker for Windows/Mac is tres cool, but the networking is not trivial. This sparkstack was tested in a docker machine. I used the following command to create my machine: 
  * `docker-machine create -d virtualbox let-it-spark`
  * `docker-machine ip let-it-spark` ip address, so you can connect to spark master:
@@ -26,7 +26,7 @@ got tired of fighting with ops for hardware and access.  Dockerized a spark stac
  docker-compose scale worker=3
  
  #to scale the worker nodes for less horsepower: 
- docker-compose scale worker = 1
+ docker-compose scale worker=1
  
  #to take down the stack once you're done:
  docker-compose down
