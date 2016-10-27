@@ -1,0 +1,35 @@
+version: '2'
+services:
+    master:
+        build: .
+        command: /opt/spark-1.6.2-bin-hadoop2.6/bin/spark-class org.apache.spark.deploy.master.Master
+        ports: 
+            - "8080" 
+            - "7077"
+            - "8888"
+            - "8081"
+            - "4040"
+            - "7001"
+            - "7002"
+            - "7003"
+            - "7004"
+            - "7005"
+            - "7006"
+            - "6066:6066"
+    worker:
+        build: .
+        command: /opt/spark-1.6.2-bin-hadoop2.6/bin/spark-class org.apache.spark.deploy.worker.Worker spark://master:7077
+        depends_on:
+            - master
+        ports: 
+            - "8080" 
+            - "7077"
+            - "8888"
+            - "8081"
+            - "4040"
+            - "7001"
+            - "7002"
+            - "7003"
+            - "7004"
+            - "7005"
+            - "7006"
