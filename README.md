@@ -33,4 +33,8 @@ got tired of fighting with ops for hardware and access.  Dockerized a spark stac
  docker-compose down
  ```
  
+## References
+* http://sometechshit.blogspot.com/2015/04/running-spark-standalone-cluster-in.html
+* https://www.big-data-europe.eu/scalable-sparkhdfs-workbench-using-docker/
+ 
  
